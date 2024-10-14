@@ -14,7 +14,7 @@ const AddUser = () => {
 
   const onSubmit = (data) => {
     axios
-      .put("/api/add-user", data)
+      .put("", data)
       .then((response) => {
         if (response.data.success) {
           Swal.fire({
