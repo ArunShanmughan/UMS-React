@@ -6,7 +6,7 @@ const initialState = {
     try {
       return storedUser ? JSON.parse(storedUser) : null;
     } catch {
-      return null;
+      return null; // If parsing fails, return null
     }
   })(),
   
@@ -15,7 +15,7 @@ const initialState = {
     try {
       return storedIsAdmin ? JSON.parse(storedIsAdmin) : false;
     } catch {
-      return false; 
+      return false; // If parsing fails, return false
     }
   })(),
 };
