@@ -20,22 +20,14 @@ const storage = getStorage(app)
 
 export async function uploadImagesToFireStore(image, userid) {
   try {
-    // Create a reference to the file in storage
-    const storageRef = ref(storage, `images/${image.name}`);
-
-    // Upload the image
+    const sanitizedFileName = image.name.replace(/\s/g, "_");
+    const storageRef = ref(storage, `images/${sanitizedFileName}`);
     await uploadBytes(storageRef, image);
     console.log('Uploaded a blob or file!');
-
-    // Get the download URL
     const url = await getDownloadURL(storageRef);
-
-    // Post the URL to your API
     const response = await axios.patch('http://localhost:8000/Images', { url, userid }, { withCredentials: true });
-    
-    // Return the response
     return response.data.url;
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error("Error during upload image in firebase",error.message);
   }
 }

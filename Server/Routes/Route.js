@@ -1,6 +1,6 @@
 import Router from 'express'
-import { Signup,Login,Profile,Images} from '../Controller/Authcontroler.js'
-import AuthenticateToken from '../Midlewere/AuthenticateToken.js'
+import { Signup,Login,Profile,Images} from '../Controller/AuthController.js'
+import AuthenticateToken from '../MiddleWare/AuthToken.js'
 
 
 const authRoutes=Router()

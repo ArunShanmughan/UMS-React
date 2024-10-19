@@ -59,10 +59,10 @@ const ALoginForm = () => {
   };
   console.log(Admin)
   return (
-    <div className="h-screen flex items-center justify-center p-4 bg-gradient-to-r from-black via-gray-900 to-gray-800">
-      <div className="bg-gray-900 bg-opacity-80 backdrop-blur-lg rounded-3xl p-10 shadow-2xl w-full max-w-md transform hover:scale-105 transition-all duration-300">
-        <h2 className="text-4xl font-extrabold text-white mb-8 text-center animate-pulse">Admin Log In</h2>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <div className="h-screen flex items-center justify-center p-6 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      <div className="bg-gray-800 bg-opacity-90 backdrop-blur-lg rounded-2xl p-12 shadow-2xl w-full max-w-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
+        <h2 className="text-5xl font-bold text-white text-center mb-10 animate-pulse tracking-wider">Admin Login</h2>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
           <div className="input-field relative">
             <input
               {...register('email', {
@@ -74,12 +74,12 @@ const ALoginForm = () => {
               })}
               type="email"
               id="email"
-              className="w-full px-5 py-3 rounded-lg bg-gray-800 focus:bg-gray-700 focus:ring-4 focus:ring-pink-500 text-white placeholder-gray-400 transition duration-200"
+              className="w-full px-6 py-4 rounded-lg bg-gray-700 focus:bg-gray-600 focus:ring-4 focus:ring-purple-500 text-white placeholder-gray-400 transition duration-300"
               placeholder="Email Address"
             />
-            <FontAwesomeIcon icon={faEnvelope} className="absolute right-4 top-4 text-white" />
+            <FontAwesomeIcon icon={faEnvelope} className="absolute right-5 top-5 text-gray-400" />
             {errors.email && (
-              <p className="text-red-600 text-sm mt-2">{errors.email.message}</p>
+              <p className="text-red-500 text-sm mt-2">{errors.email.message}</p>
             )}
           </div>
           <div className="input-field relative">
@@ -93,31 +93,31 @@ const ALoginForm = () => {
               })}
               type="password"
               id="password"
-              className="w-full px-5 py-3 rounded-lg bg-gray-800 focus:bg-gray-700 focus:ring-4 focus:ring-pink-500 text-white placeholder-gray-400 transition duration-200"
+              className="w-full px-6 py-4 rounded-lg bg-gray-700 focus:bg-gray-600 focus:ring-4 focus:ring-purple-500 text-white placeholder-gray-400 transition duration-300"
               placeholder="Password"
             />
-            <FontAwesomeIcon icon={faLock} className="absolute right-4 top-4 text-white" />
+            <FontAwesomeIcon icon={faLock} className="absolute right-5 top-5 text-gray-400" />
             {errors.password && (
-              <p className="text-red-600 text-sm mt-2">{errors.password.message}</p>
+              <p className="text-red-500 text-sm mt-2">{errors.password.message}</p>
             )}
           </div>
           <button
             type="submit"
-            className="btn w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 focus:ring-4 focus:ring-pink-500 transition duration-300 transform hover:scale-110"
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg py-3 rounded-lg hover:opacity-90 focus:ring-4 focus:ring-purple-500 transition duration-300 transform hover:scale-110"
           >
             Log In
-            <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            <FontAwesomeIcon icon={faArrowRight} className="ml-3" />
           </button>
         </form>
-       
-        <div className="mt-8 flex justify-center space-x-6">
-          <a href="#" className="text-white hover:text-pink-300 transition-colors duration-200">
+
+        <div className="mt-8 flex justify-center space-x-8">
+          <a href="#" className="text-white hover:text-pink-500 transition duration-300">
             <FontAwesomeIcon icon={faFacebookF} className="fab text-2xl" />
           </a>
-          <a href="#" className="text-white hover:text-pink-300 transition-colors duration-200">
+          <a href="#" className="text-white hover:text-pink-500 transition duration-300">
             <FontAwesomeIcon icon={faTwitter} className="fab text-2xl" />
           </a>
-          <a href="#" className="text-white hover:text-pink-300 transition-colors duration-200">
+          <a href="#" className="text-white hover:text-pink-500 transition duration-300">
             <FontAwesomeIcon icon={faGoogle} className="fab text-2xl" />
           </a>
         </div>

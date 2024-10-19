@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import SignUpPage from "./Compenets/SignUp";
-import LoginForm from "./Compenets/Login";
+import SignUpPage from "./Components/SignUp";
+import LoginForm from "./Components/Login";
 import {
   BrowserRouter as Router,
   Route,
@@ -8,13 +8,13 @@ import {
   Navigate,
   useSearchParams,
 } from "react-router-dom";
-import Home from "./Compenets/Home";
-import UserProfile from "./Compenets/Profile";
+import Home from "./Components/Home";
+import UserProfile from "./Components/Profile";
 import { useSelector } from "react-redux";
-import AdminHome from "./Compenets/AdminHome";
-import Users from "./Compenets/Users";
-import ALoginForm from "./Compenets/Adminlogin";
-import EditPage from "./Compenets/EditPage";
+import AdminHome from "./Components/AdmHome";
+import Users from "./Components/Users";
+import ALoginForm from "./Components/AdmLogin";
+import EditPage from "./Components/AdmEdit";
 
 const App = () => {
   const user = useSelector((state) => state.user.user);

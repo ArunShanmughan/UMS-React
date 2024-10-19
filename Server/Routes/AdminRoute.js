@@ -1,6 +1,6 @@
 import { adminLogin ,editPage,Users,updateUser,addUser,Delete,Search} from '../Controller/Admincontroller.js'
 import Router from 'express'
-import authenticateToken from '../Midlewere/AuthenticateToken.js'
+import authenticateToken from '../MiddleWare/AuthToken.js'
 const adminRoutes=Router()
 
 adminRoutes.post('/adminLogin',adminLogin)
